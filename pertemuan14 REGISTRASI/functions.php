@@ -174,6 +174,17 @@ function Registrasi($data) {
 		return false;
 	}
 
+	// cek email sudah terdaftar atau belum
+	$cek_email = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
+
+	if( mysqli_num_rows($cek_email) === 1 ) {
+		echo "<script>
+				alert('Email Sudah Digunakan!');
+				document.location.href = '';
+			  </script>";
+		return false;
+	}
+
 	// tambahkan user baru ke database
 	// enkripsi password
 	$password = password_hash($password, PASSWORD_DEFAULT);
