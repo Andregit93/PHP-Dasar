@@ -28,7 +28,11 @@ if( isset($_POST["register"]) ) {
 		li, label {
 			display: block;
 			margin: 20px 0 10px 0;
-			
+		}
+		button {
+			margin: 10px 0 0 10px;
+            width: 120px;
+            height: 30px;
 		}
 		form {
 			text-align: center;
