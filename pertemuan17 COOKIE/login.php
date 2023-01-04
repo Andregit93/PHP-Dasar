@@ -55,63 +55,60 @@ if( isset($_POST["login"]) ) {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
 
-    <style>
-        h1, p {
-            text-align: center;
-        }
-        form {
-            text-align: center;
-            margin-right: 38px;
-        }
-        .remember {
-            display: inline;
-        }
-        li, label {
-			display: block;
-			margin: 30px 0 10px 0;
-		}
-        button {
-			margin: 10px 0 0 10px;
-            width: 80px;
-            height: 30px;
-		}
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/login.css">
+  <title>Login</title>
 </head>
+
 <body>
 
-    <h1>Login</h1>
-    <?php if( isset($error) ) : ?>
-        <p style="font-style: italic; color: red;">Username / Password Salah!</p>
-    <?php endif; ?>
-    
-    <form action="" method="POST">
-        <ul type="none">
-            <li>
-                <label for="username">USERNAME</label>
-                <input type="text" name="username" id="username" required>
-            </li>
-            <li>
-                <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password">
-            </li>
-            <li>
+  <div class="vh-100 d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card bg-white text-center">
+            <div class="card-body p-5">
+              <form class="mb-3 mt-2 md-4" action="" method="POST">
+                <h2 class="fw-bold mb-1">Sign In</h2>
+                <p class=" mb-5">Please enter your username and password!</p>
+                <?php if( isset($error) ) : ?>
+                <div class="alert alert-danger text-center" role="alert">
+                  <div>
+                    Username or Password Wrong
+                  </div>
+                </div>
+                <?php endif; ?>
+                <div class="mb-3">
+                  <label for="username" class="form-label h6 d-flex align-items-start">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" required placeholder="Username">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label h6 d-flex align-items-start">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" required placeholder="*******">
+                </div>
                 <input class="remember" type="checkbox" name="remember" id="remember">
                 <label class="remember" for="remember">Remember Me</label>
-            </li>
-            <li>
-                <button name="login">Login</button>
-            </li>
-            <li>
-                <label for="regis"><a href="registrasi.php">Registrasi</a>, jika belum memiliki akun</label>
-            </li>
-        </ul>
-    </form>
-    
+                <div class="d-grid pt-5 d-md-flex justify-content-md-center">
+                  <button class="btn btn-outline-primary" style="width: 200px;" type="submit" name="login">Sign In</button>
+                </div>
+              </form>
+              <div class="mb-2">
+                <p class="mb-0  text-center">Don't have an account? <a href="registrasi.php"
+                    class="text-primary fw-bold">Sign
+                    Up</a></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
