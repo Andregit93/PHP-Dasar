@@ -1,0 +1,65 @@
+body {
+    background-color: #F8F9FA;
+}
+
+.kosong {
+    height: 7rem;
+}
+
+.studentsData {
+    background-color: white;
+    width: 80%;
+    border-radius: 1em;
+}
+
+h1 {
+    padding-top: 2rem;
+    padding-bottom: 2px;
+}
+
+h1 hr {
+    width: 250px;
+    border-top: 3px solid #555;
+   
+}
+
+.aksi {
+    background-color: #ddd;
+}
+
+table {
+    margin: 20px auto;
+}
+
+.search {
+    position: absolute;
+    right: 0;
+    margin-right: 220px;
+}
+
+.add {
+    margin-left: 220px;
+    width: 180px;
+    height: 30px;
+}
+
+nav .nav-item .logout a {
+    text-decoration: none;
+    color: #DC3545;
+}
+
+footer {
+    background-color: white !important;
+    height: 65px;
+    line-height: 65px;
+}
+
+footer p a { 
+    text-decoration: none;
+}
+
+.not-found{
+    text-align: center;
+    margin-top: 2rem;
+    color: red;
+}
